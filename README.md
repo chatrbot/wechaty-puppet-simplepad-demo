@@ -11,14 +11,13 @@ $ npm install
 ```
 3. 执行运行命令,把{YOUR_TOKEN}替换为您自己的token
 ```shell
-npx ts-node ./bot.ts -t {YOUR_TOKEN}
+$ npx ts-node ./bot.ts -t {YOUR_TOKEN}
 ```
 ## 如何调试  
 如果您没有成功启动(第一次登录终端会显示一个二维码),请提高日志输出等级查看相关信息.  
 ```shell
-export SIMPLEPAD_LOG='verbose'        # 把日志模式变为"verbose",默认为"error"
-npx ts-node ./bot.ts -t {YOUR_TOKEN}  # 尝试重新运行
-
+$ export SIMPLEPAD_LOG='verbose'        # 把日志模式变为"verbose",默认为"error"
+$ npx ts-node ./bot.ts -t {YOUR_TOKEN}  # 尝试重新运行
 ```
 或者在issues中告诉我们您遇到的情况,让我们来协助您.  
 
