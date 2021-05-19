@@ -19,7 +19,7 @@ $ npx ts-node ./bot.ts -t {YOUR_TOKEN}
 $ export SIMPLEPAD_LOG='verbose'        # 把日志模式变为"verbose",默认为"error"
 $ npx ts-node ./bot.ts -t {YOUR_TOKEN}  # 尝试重新运行
 ```
-或者在issues中告诉我们您遇到的情况,让我们来协助您.  
+或者在[issues](https://github.com/chatrbot/wechaty-puppet-simplepad-demo/issues)中告诉我们您遇到的情况,让我们来协助您.  
 
 ## 如何获取token
 请阅读项目[Wiki](https://github.com/chatrbot/wechaty-puppet-simplepad/wiki/%E8%8E%B7%E5%BE%97%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84Token)来获取相关信息
