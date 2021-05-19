@@ -1,0 +1,14 @@
+{
+  "baseUrl":".",
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "typeRoots": ["./typing.d.ts"],
+    "target": "esnext",
+    "module": "commonjs",
+    "strict": true,
+    "noImplicitAny":false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
