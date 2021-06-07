@@ -2629,10 +2629,10 @@ wechaty-puppet-service@^0.19.4:
     stronger-typed-streams "^0.2.0"
     wechaty-grpc "^0.23.9"
 
-wechaty-puppet-simplepad@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.npmjs.org/wechaty-puppet-simplepad/-/wechaty-puppet-simplepad-0.0.7.tgz#ca9303a6d9fb295c436d88c321ad0c2d70b31201"
-  integrity sha512-hP5KinVxYk1+JRK38jNHrVMmJalB0cC0SX7iMmcuEpDjfM9bXH4inionU9eCsQb2c8/0HK+IOzuacB4b8T2wHA==
+wechaty-puppet-simplepad@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.npmjs.org/wechaty-puppet-simplepad/-/wechaty-puppet-simplepad-0.0.9.tgz#54701ae6538d2d97b6c51ac70008332667b057d7"
+  integrity sha512-6pERX9O4LeMpPpiisnquqpHkJxqjRFeY+RIj8o+CDH9/1XtmLWItNAcPFdkq8X5zRXIbYvYt9fMbATojwSglSw==
   dependencies:
     axios "^0.21.1"
     flash-store "^0.20.7"
