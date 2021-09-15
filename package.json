@@ -19,16 +19,16 @@
   },
   "homepage": "https://github.com/chatrbot/wechaty-puppet-simplepad-demo#readme",
   "dependencies": {
-    "commander": "^7.2.0",
+    "commander": "^8.2.0",
     "jimp": "^0.16.1",
     "qrcode-reader": "^1.0.4",
     "qrcode-terminal": "^0.12.0",
-    "wechaty": "^0.60.10",
-    "wechaty-puppet-simplepad": "latest"
+    "wechaty": "^0.68.1",
+    "wechaty-puppet-simplepad": "0.2.0"
   },
   "devDependencies": {
     "@types/commander": "^2.12.2",
     "@types/jimp": "^0.2.28",
-    "@types/node": "^15.3.0"
+    "@types/node": "^16.9.1"
   }
 }
