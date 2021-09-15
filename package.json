@@ -1,6 +1,6 @@
 {
   "name": "wechaty-puppet-simplepad-demo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Demo for simplepad",
   "keywords": [
     "simplepad",
@@ -20,8 +20,6 @@
   "homepage": "https://github.com/chatrbot/wechaty-puppet-simplepad-demo#readme",
   "dependencies": {
     "commander": "^8.2.0",
-    "jimp": "^0.16.1",
-    "qrcode-reader": "^1.0.4",
     "qrcode-terminal": "^0.12.0",
     "wechaty": "^0.68.1",
     "wechaty-puppet-simplepad": "0.2.0"

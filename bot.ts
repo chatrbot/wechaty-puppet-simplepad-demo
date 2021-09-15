@@ -1,10 +1,8 @@
-import { Contact, Friendship, Message, RoomInvitation, Wechaty } from "wechaty"
-import { PuppetSimplePad } from "wechaty-puppet-simplepad"
-import { FriendshipType, ScanStatus } from "wechaty-puppet"
-import { program } from "commander"
+import {Contact, Friendship, Message, RoomInvitation, Wechaty, FileBox} from "wechaty"
+import {PuppetSimplePad} from "wechaty-puppet-simplepad"
+import {FriendshipType, ScanStatus} from "wechaty-puppet"
+import {program} from "commander"
 import QrcodeTerminal from "qrcode-terminal"
-import QrCode from "qrcode-reader"
-import Jimp from "jimp"
 
 program.option("-t, --token <TOKEN>", "SimplePad的token").parse()
 
@@ -23,8 +21,8 @@ if (!token) {
     process.exit(0)
 }
 
-const puppet = new PuppetSimplePad({ token })
-const bot = new Wechaty({ puppet })
+const puppet = new PuppetSimplePad({token})
+const bot = new Wechaty({puppet})
 
 bot.on("scan", async (qrcode: string, status: ScanStatus) => {
     /**
@@ -33,22 +31,13 @@ bot.on("scan", async (qrcode: string, status: ScanStatus) => {
      * 个二维码图片,所以需要先解析一次二维码,然后再把内容重新生成一个二维码输出到终端
      */
     if (status === ScanStatus.Waiting && qrcode) {
-        const buffer = Buffer.from(qrcode, "base64")
-        await Jimp.read(buffer, function (err, image) {
-            if (err) {
-                console.error("jimp err", err)
-                return
-            }
-            const qr = new QrCode()
-            qr.callback = function (err: any, result: any) {
-                if (err) {
-                    console.error("call back err", err)
-                    return
-                }
-                QrcodeTerminal.generate(result.result, { small: true })
-            }
-            qr.decode(image.bitmap)
-        })
+        try{
+            const fileBox = FileBox.fromBase64(qrcode,'qrcode')
+            const qrCodeValue = await fileBox.toQRCode()
+            QrcodeTerminal.generate(qrCodeValue, { small: true })
+        }catch (err){
+            console.error(`获取二维码失败,请尝试重新启动:${err}`)
+        }
     } else {
         console.info("Bot Demo", `onScan: ${ScanStatus[status]}(${status})`)
     }
